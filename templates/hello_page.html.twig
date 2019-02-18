@@ -1,1 +1,12 @@
-Hello pagina :)
+{% extends 'base.html.twig' %}
+
+{% block title %}Custom title{% endblock title %}
+
+
+{% block main %}
+
+    {{ dump() }}
+
+    Hello {{ app.request.query.get('name') | default('default')}} :)
+
+{% endblock main %}
